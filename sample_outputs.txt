@@ -52,7 +52,7 @@ __World__
 __Hello__
 <<<<<<<<
 
-# Here is another file in the repo that (as far as I know!) is safe - at the very least it's interesting to see some of the lengths the attacker went to so that their binary would blend in with the other test fixtures.
+# Here is another benign test file - at the very least it's interesting to see some of the lengths the attacker went to so that their binary would blend in with the other test fixtures.
 >>>>>>>>tests/files/bad-1-stream_flags-3.xz
 Wed Nov 19 20:46:52 2008 +0200
 e114502b
@@ -90,4 +90,44 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ^^^^^^^^strings
 World!
 Hello
+<<<<<<<<
+
+# Including for comparison also, this is an older benign test file from 2009 that is a compressed x86 ELF binary (the reason for it is explained in the commit message)
+>>>>>>>>tests/files/good-1-x86-lzma2.xz
+Fri Feb 6 09:13:15 2009 +0200
+975d8fd7
+Lasse Collin <redacted>
+Recreated the BCJ test files for x86 and SPARC. The old files were linked with crt*.o, which are copyrighted, and thus the old test files were not in the public domain as a whole. They are freely distributable though, but it is better to be careful and avoid including any copyrighted pieces in the test files. The new files are just compiled and assembled object files, and thus don't contain any copyrighted code.
+1801 commits authored by email (first commit on Sun Dec 9 00:42:33 2007 +0200)
+========binwalk
+
+Scan Time:     2024-03-30 15:15:35
+Target File:   /fakepath/xz/tests/files/good-1-x86-lzma2.xz
+MD5 Checksum:  cac74e22da04c4e067d21ae170863bf2
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2024-03-30 15:15:35
+Target File:   /fakepath/xz/tests/files/good-1-x86-lzma2.xz
+MD5 Checksum:  cac74e22da04c4e067d21ae170863bf2
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             xz compressed data
+
+
+Scan Time:     2024-03-30 15:15:35
+Target File:   /fakepath/xz/tests/files/_good-1-x86-lzma2.xz.extracted/0
+MD5 Checksum:  ce212d6a1cfe73d8395a2b42f94c2419
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             ELF, 32-bit LSB relocatable, Intel 80386, version 1 (SYSV)
+
+^^^^^^^^strings
+Ebv)
 <<<<<<<<

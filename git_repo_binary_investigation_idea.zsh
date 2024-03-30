@@ -40,6 +40,7 @@ done | less # or save it to a file with ">> output.txt", up to you!
 # - better instructions, clean up slightly and expand it over multiple lines (thank you Raven!)
 # - add strings and committer stats
 # - add sample output for easier sharing
+# - added another sample output showing some of the benign files in the project containing an actual compressed ELF binary
 #
 # future ideas:
 # - structured outputting (🥲)
