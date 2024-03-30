@@ -1,0 +1,93 @@
+# This is what the current revision would output for one of the commits adding the exploit-carrying test fixtures in CVE-2024-3094 
+# (see https://www.openwall.com/lists/oss-security/2024/03/29/4 for more info)
+# 
+# Sadly this looks pretty similar to other random binary fixtures in the repository (example below), but may inspire your own tweaks for other things to add~
+
+>>>>>>>>tests/files/good-2cat.xz
+Fri Feb 23 23:09:59 2024 +0800
+cf44e4b7
+Jia Tan <redacted>
+Tests: Add a few test files.
+451 commits authored by email (first commit on Fri Jan 28 20:47:55 2022 +0800)
+========binwalk
+
+Scan Time:     2024-03-30 15:15:13
+Target File:   /fakepath/xz/tests/files/good-2cat.xz
+MD5 Checksum:  b5615ce7d8388853cdb843b86d92fd57
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2024-03-30 15:15:13
+Target File:   /fakepath/xz/tests/files/good-2cat.xz
+MD5 Checksum:  b5615ce7d8388853cdb843b86d92fd57
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             xz compressed data
+68            0x44            xz compressed data
+
+
+Scan Time:     2024-03-30 15:15:13
+Target File:   /fakepath/xz/tests/files/_good-2cat.xz.extracted/0
+MD5 Checksum:  2d99a8021719ca8257afa1fde6c29902
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2024-03-30 15:15:13
+Target File:   /fakepath/xz/tests/files/_good-2cat.xz.extracted/44
+MD5 Checksum:  30cfe120f91122e304a5db4e71d3c112
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+^^^^^^^^strings
+__World__
+__Hello__
+<<<<<<<<
+
+# Here is another file in the repo that (as far as I know!) is safe - at the very least it's interesting to see some of the lengths the attacker went to so that their binary would blend in with the other test fixtures.
+>>>>>>>>tests/files/bad-1-stream_flags-3.xz
+Wed Nov 19 20:46:52 2008 +0200
+e114502b
+Lasse Collin <redacted>
+Oh well, big messy commit again. Some highlights:   - Updated to the latest, probably final file format version.   - Command line tool reworked to not use threads anymore.     Threading will probably go into liblzma anyway.   - Memory usage limit is now about 30 % for uncompression     and about 90 % for compression.   - Progress indicator with --verbose   - Simplified --help and full --long-help   - Upgraded to the last LGPLv2.1+ getopt_long from gnulib.   - Some bug fixes
+1801 commits authored by email (first commit on Sun Dec 9 00:42:33 2007 +0200)
+========binwalk
+
+Scan Time:     2024-03-30 15:15:04
+Target File:   /fakepath/xz/tests/files/bad-1-stream_flags-3.xz
+MD5 Checksum:  c570f7455b47752caf9cad0aa46f2445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2024-03-30 15:15:04
+Target File:   /fakepath/xz/tests/files/bad-1-stream_flags-3.xz
+MD5 Checksum:  c570f7455b47752caf9cad0aa46f2445
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             xz compressed data
+
+
+Scan Time:     2024-03-30 15:15:04
+Target File:   /fakepath/xz/tests/files/_bad-1-stream_flags-3.xz.extracted/0
+MD5 Checksum:  fbf68a8e34b2ded53bba54e68794b4fe
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+^^^^^^^^strings
+World!
+Hello
+<<<<<<<<
